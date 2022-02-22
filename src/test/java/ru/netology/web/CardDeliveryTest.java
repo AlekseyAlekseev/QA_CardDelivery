@@ -5,19 +5,12 @@ import org.openqa.selenium.Keys;
 import ru.netology.entities.RegistrationInfo;
 import ru.netology.utils.DataGenerator;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.*;
+import static ru.netology.utils.DataGenerator.Registration.generateDate;
 
 public class CardDeliveryTest {
-
-
-    private String generateDate(int days) {
-        return LocalDate.now().plusDays(days).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
-    }
 
 
     @Test
